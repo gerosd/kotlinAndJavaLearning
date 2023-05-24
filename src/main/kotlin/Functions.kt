@@ -5,6 +5,7 @@ fun main() {
     testDefaultArguments()
     testDefaultArguments(y = 2)
     println(foo("Huita"))
+    printEven(1, 5, 6, 2, 45, 0b0110) //0b0110 - binary number system
 }
 
 fun testSimple(x: Int, y: Int): Int = x + y
@@ -24,4 +25,8 @@ fun testDefaultArguments(x: Int = 1, y: Int = 9) {
 
 fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false): String {
     return (if(toUpperCase) name.uppercase() else name) + number
+}
+
+fun printEven(vararg numbers: Int) {
+    numbers.forEach {e -> if (e % 2 == 0) println(e)}
 }
