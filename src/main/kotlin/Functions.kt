@@ -6,6 +6,7 @@ fun main() {
     testDefaultArguments(y = 2)
     println(foo("Huita"))
     printEven(1, 5, 6, 2, 45, 0b0110) //0b0110 - binary number system
+    printEven(*intArrayOf(1, 5, 6, 2, 56, 234, 45, 0b0110))
 }
 
 fun testSimple(x: Int, y: Int): Int = x + y
