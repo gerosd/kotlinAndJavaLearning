@@ -4,7 +4,6 @@ fun main() {
     println(a.length)
 
     var b:String? = "Test"
-    b = null
     /** @return length if b != null
      * @return else b == null
      */
@@ -12,4 +11,9 @@ fun main() {
 
     // Elvis operator - ?:
     val elvis = b?.length ?: -1
+
+    b = if ((0..10).random() > 5) "asd" else null
+
+    // !! if null -> NPE
+    val t = b!!.length
 }
