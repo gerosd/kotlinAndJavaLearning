@@ -28,6 +28,7 @@ fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false): String {
     return (if(toUpperCase) name.uppercase() else name) + number
 }
 
+// Vararg - любое кол-во элементов
 fun printEven(vararg numbers: Int) {
     numbers.forEach {e -> if (e % 2 == 0) println(e)}
 }
