@@ -1,6 +1,5 @@
 package serializable;
 
-
 import java.io.*;
 
 public class Serializable {
@@ -12,7 +11,7 @@ public class Serializable {
     private static void serialization() {
         try (FileOutputStream fos = new FileOutputStream("src\\main\\resources\\serializable.ser");
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
-            FileForSerializable ffs = new FileForSerializable();
+            FileForSerialization ffs = new FileForSerialization();
             oos.writeObject(ffs);
             oos.flush();
         } catch (IOException e) {
@@ -22,8 +21,8 @@ public class Serializable {
     private static void unSerialization() {
         try (FileInputStream fis = new FileInputStream("src\\main\\resources\\serializable.ser");
              ObjectInputStream ois = new ObjectInputStream(fis)) {
-            FileForSerializable ffs = (FileForSerializable) ois.readObject();
-            System.out.println("Version is " + ffs.version);
+            FileForSerialization ffs = (FileForSerialization) ois.readObject();
+            System.out.println(ffs);
         } catch(ClassNotFoundException | IOException e) {
             e.printStackTrace();
         }
