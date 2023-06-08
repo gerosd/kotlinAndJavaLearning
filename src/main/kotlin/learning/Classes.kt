@@ -1,3 +1,5 @@
+package learning
+
 fun main() {
     val child = Person("Bobus", "Sardobus", 12)
     val per1 = Person("Imya", "Familiya", 34, child)
