@@ -6,7 +6,6 @@ public class TestMultithreading {
         Thread thread1 = new Thread(new Runner());
         thread1.start();
         thread.start();
-        thread1.join();
     }
 }
 
