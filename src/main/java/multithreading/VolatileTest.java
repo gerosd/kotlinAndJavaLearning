@@ -10,6 +10,8 @@ public class VolatileTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        
+        System.out.println(thread.isInterrupted());
 
         thread.shutdown();
     }
